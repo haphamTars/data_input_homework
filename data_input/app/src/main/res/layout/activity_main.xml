@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/full_name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="15dp"
+        android:text="Full Name (*):"
+        android:textSize="12sp"
+        android:textColor="@color/black" />
+    <EditText
+        android:id="@+id/full_name_enter_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/full_name_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="15dp"
+        android:textSize="12sp"
+        android:inputType="textPersonName"
+       />
+    <TextView
+        android:id="@+id/student_id_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/full_name_label"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="15dp"
+        android:text="Student ID (*):"
+        android:textSize="12sp"
+        android:textColor="@color/black" />
+    <EditText
+        android:id="@+id/student_id_enter_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/full_name_enter_text"
+        app:layout_constraintStart_toEndOf="@id/student_id_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="15dp"
+        android:inputType="number"
+        android:textSize="12sp"
+        />
+
+    <TextView
+        android:id="@+id/id_card_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/student_id_label"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="15dp"
+        android:text="ID Card Number(*):"
+        android:textSize="12sp"
+        android:textColor="@color/black" />
+    <EditText
+        android:id="@+id/id_card_enter_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/student_id_enter_text"
+        app:layout_constraintStart_toEndOf="@id/id_card_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="15dp"
+        android:textSize="12sp"
+        android:inputType="number"
+        />
+
+    <TextView
+        android:id="@+id/phone_number_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/id_card_label"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="15dp"
+        android:text="Phone Number(*):"
+        android:textSize="12sp"
+        android:textColor="@color/black" />
+    <EditText
+        android:id="@+id/phone_number_enter_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/id_card_enter_text"
+        app:layout_constraintStart_toEndOf="@id/phone_number_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="15dp"
+        android:inputType="number"
+        android:textSize="12sp"
+        />
+
+    <TextView
+        android:id="@+id/email_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/phone_number_label"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="15dp"
+        android:text="Email(*):"
+        android:textSize="12sp"
+        android:textColor="@color/black" />
+    <EditText
+        android:id="@+id/email_enter_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/phone_number_enter_text"
+        app:layout_constraintStart_toEndOf="@id/email_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="15dp"
+        android:textSize="12sp"
+        android:inputType="textEmailAddress"/>
+
+    <TextView
+        android:id="@+id/homeland_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/email_label"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:text="Home Town(*):"
+        android:textSize="12sp"
+        android:textColor="@color/black" />
+
+    <Spinner
+        android:id="@+id/province_spinner_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/email_enter_text"
+        app:layout_constraintStart_toEndOf="@id/homeland_label"
+        android:layout_marginTop="8dp"
+        android:scrollbarSize="8dp"/>
+
+    <Spinner
+        android:id="@+id/district_spinner_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/email_enter_text"
+        app:layout_constraintStart_toEndOf="@id/province_spinner_option"
+        android:layout_marginTop="8dp"
+        android:scrollbarSize="8dp"/>
+
+    <TextView
+        android:id="@+id/current_address_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/homeland_label"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:text="Current Address(*):"
+        android:textSize="12sp"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/address_enter_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/province_spinner_option"
+        app:layout_constraintStart_toEndOf="@id/current_address_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="15dp"
+        android:textSize="12sp"
+        android:inputType="textMultiLine"
+        android:lines="2"
+        android:maxLines="2"/>
+
+    <TextView
+        android:id="@+id/birthday_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/current_address_label"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="15dp"
+        android:text="Birthday(*):"
+        android:textSize="12sp"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/select_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/birthday_label"
+        app:layout_constraintTop_toBottomOf="@id/current_address_label"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text=" /  /  / "
+        android:textSize="16sp"
+        style="?android:spinnerStyle"
+        android:textColor="@color/black"
+        android:onClick="openDatePicker"/>
+
+    <TextView
+        android:id="@+id/major_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/birthday_label"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="15dp"
+        android:text="Study Major(*):"
+        android:textSize="12sp"
+        android:textColor="@color/black" />
+
+    <RadioGroup
+        android:id="@+id/radio_study_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/major_label"
+        app:layout_constraintTop_toBottomOf="@id/birthday_label"
+        android:orientation="vertical"
+        android:layout_marginStart="20dp">
+
+        <RadioButton
+            android:id="@+id/computer_science_option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Computer Science"
+            android:textSize="12sp"/>
+
+        <RadioButton
+            android:id="@+id/computer_engineer_option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Computer Engineering"
+            android:textSize="12sp"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/program_language_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/radio_study_option"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:text="Program Languages(*):"
+        android:textSize="12sp"
+        android:textColor="@color/black" />
+    <CheckBox
+        android:id="@+id/C_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/program_language_label"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="4dp"
+        android:text="C/C++" />
+
+    <CheckBox
+        android:id="@+id/Java_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/program_language_label"
+        app:layout_constraintStart_toEndOf="@id/C_option"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:text="Java" />
+    <CheckBox
+        android:id="@+id/Python_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/program_language_label"
+        app:layout_constraintStart_toEndOf="@id/Java_option"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:text="Python" />
+    <CheckBox
+        android:id="@+id/Ruby_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/program_language_label"
+        app:layout_constraintStart_toEndOf="@id/Python_option"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:text="Ruby" />
+
+    <CheckBox
+        android:id="@+id/agree_policy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/C_option"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="24dp"
+        android:text="I have read and agree on this using policy"
+        android:onClick="checkPolicy"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">DataInput</string>
+    <string name="default_text">Enter Text Here</string>
+    <string-array name="provinces_array">
+        <item>Hà Nội</item>
+        <item>Hải Dương</item>
+        <item>Tp.HCM</item>
+    </string-array>
+
+    <string-array name="districts_array">
+        <item>Thanh Hà</item>
+    </string-array>
+</resources>
